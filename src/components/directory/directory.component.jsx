@@ -19,7 +19,7 @@ class Directory extends Component {
         {
           title: "jackets",
           imageUrl:
-            "https://cdn.vox-cdn.com/thumbor/UK7BeVSPfZoaGu2zdmemh9xKhDk=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22807839/GettyImages_1175278483.jpg",
+            "https://threadcurve.com/wp-content/uploads/2021/03/types-of-leather-jackets-Mar192021-1-min.jpg",
           id: 2,
         },
 
@@ -35,6 +35,7 @@ class Directory extends Component {
           imageUrl:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWd5wJs57oeJq-13alJu2pFTOM3s8ePwYbQOTYPJzG4Ixq3peyy_WPIU9wX2aJgULmICk&usqp=CAU",
           id: 4,
+          size: "large",
         },
 
         {
@@ -42,6 +43,7 @@ class Directory extends Component {
           imageUrl:
             "https://manofmany.com/wp-content/uploads/2016/02/what-people-need-to-know-about-mens-fashion-week.jpg",
           id: 5,
+          size: "large",
         },
       ],
     };
@@ -50,8 +52,8 @@ class Directory extends Component {
   render() {
       return (
         <div className="directory-menu">
-          {this.state.sections.map(({ title, imageUrl, id }) => (
-            <MenuItem key={id} title={title} />
+          {this.state.sections.map(({ title, imageUrl, id, size }) => (
+            <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
           ))}
         </div>
       );
